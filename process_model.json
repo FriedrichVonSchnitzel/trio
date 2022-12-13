@@ -1,0 +1,67 @@
+[
+  {
+    "@id": "dtmi:aluminum_factory:packaging;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "Aluminum Packaging Process",
+    "contents": [
+      {
+        "name": "cncProximitySensor",
+        "@type": "Component",
+        "schema": "dtmi:aluminum_factory:cnc_proximity_sensor;1"
+      },
+      {
+        "name": "cncEngineSpeedSensor",
+        "@type": "Component",
+        "schema": "dtmi:aluminum_factory:cnc_engine_speed_sensor;1"
+      },
+      {
+        "name": "cncPressureSensor",
+        "@type": "Component",
+        "schema": "dtmi:aluminum_factory:cnc_pressure_sensor;1"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:aluminum_factory:cnc_proximity_sensor;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "CNC Proximity Sensor",
+    "contents": [
+      {
+        "name": "proximity",
+        "@type": ["Property", "Distance"],
+        "unit": "millimetre",
+        "schema": "float"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:aluminum_factory:cnc_engine_speed_sensor;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "CNC Engine Speed Sensor",
+    "contents": [
+      {
+        "name": "engineSpeed",
+        "@type": ["Property", "AngularVelocity"],
+        "unit": "revolutionPerMinute",
+        "schema": "integer"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:aluminum_factory:cnc_pressure_sensor;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "CNC Pressure Sensor",
+    "contents": [
+      {
+        "name": "pressure",
+        "@type": ["Property", "Pressure"],
+        "unit": "bar",
+        "schema": "integer"
+      }
+    ]
+  }
+]
