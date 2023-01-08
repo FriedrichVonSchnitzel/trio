@@ -1,5 +1,5 @@
 # Integration of entire pipeline
-def integration(method):
+def integration(send_to_twin = False):
     # Load libraries
     import data_simulation as ds
     import machine_learning as ml
@@ -11,8 +11,8 @@ def integration(method):
         print(i[["Time", "Proximity", "Engine Speed", "Pressure"]].to_string(index = False))
 
          # Send data to Digital Twin
-        if method == "send_to_twin":
-            # Check data for anomalies
+        if send_to_twin == True:
+            # Check data for anomalies ("correct" refers to correct data)
             if ml.detect_anomalies(i[["Proximity", "Engine Speed", "Pressure"]]) == "correct":
                 # Update digital twin
                 adt.set_proximity(float(i["Proximity"]))
@@ -32,6 +32,6 @@ def integration(method):
             else:
                 # Print failure message
                 print("Digital Twin was not updated.")
-                #clear_output(wait=True)
+                # clear_output(wait=True)
 
-integration(method = "send_to_twin")
+#integration(send_to_twin = True)

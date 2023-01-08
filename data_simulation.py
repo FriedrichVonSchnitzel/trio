@@ -167,4 +167,4 @@ def simulate_real_time(anomaly_1_probability, anomaly_2_probability, anomaly_3_p
             sleep(5)
 
 # for i in simulate_real_time(0.01, 0.01, 0.01, 0.5):
-#     print(i)
+#     print(i.to_string(index = False))
