@@ -1,0 +1,16 @@
+{
+  "metrics": {
+    "CNC Proximity": {
+      "minimum": 3.0,
+      "maximum": 30.0
+    },
+    "CNC Engine Speed": {
+      "minimum": 500,
+      "maximum": 7000
+    },
+    "CNC Pressure": {
+        "minimum": 1500,
+        "maximum": 6000
+    }
+  }
+}
