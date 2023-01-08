@@ -4,6 +4,7 @@ def integration(send_to_twin = False):
     import data_simulation as ds
     import machine_learning as ml
     import azure_digital_twin as adt
+    from IPython.display import clear_output
     
     # Iterate through real-time data simulation
     for i in ds.simulate_real_time(0.1, 0.1, 0.1, 0.5):
