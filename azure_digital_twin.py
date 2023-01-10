@@ -148,7 +148,7 @@ def plot_sensor_values():
     plt.rcParams["figure.figsize"] = (12,7)
     figure, axis = plt.subplots(1, 3)
     plt.subplots_adjust(wspace=1)
-    plt.suptitle("Digital Twin")
+    plt.suptitle("Real-time sensor values of Digital Twin")
 
     # Plot 1
     axis[0].bar(x=0, height=engine_speed, width=1, align='center', alpha=1, color="#22a7f0")
